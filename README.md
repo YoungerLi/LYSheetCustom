@@ -35,6 +35,7 @@
     }
 }
 ```
+![LYSheetCustom](https://github.com/YoungerLi/LYSheetCustom/blob/master/LYSheetCustom/LYSheetCustom.png)
 
 ## 2、LYAlertCustom -- 中部弹窗
 首先导入#import "LYAlertCustom.h"，遵守代理<LYAlertCustomDelegate>
@@ -55,3 +56,4 @@
     NSLog(@"点击了第%zd行", buttonIndex);
 }
 ```
+![LYAlertCustom](https://github.com/YoungerLi/LYSheetCustom/blob/master/LYSheetCustom/LYAlertCustom.png)
