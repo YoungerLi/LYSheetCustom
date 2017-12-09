@@ -1,5 +1,5 @@
 # LYSheetCustom
-最常用仿微信底部弹窗ActionSheetView和常用中部弹窗AlertView.
+最常用仿微信底部弹窗ActionSheetView和常用中部弹窗AlertView。
 
 # 使用方法
 ## 1、LYSheetCustom -- 底部弹窗
