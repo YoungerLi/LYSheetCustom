@@ -2,7 +2,7 @@
 最常用仿微信底部弹窗ActionSheetView和常用中部弹窗AlertView.
 
 # 使用方法
-## 1、LYSheetCustom -- 仿微信底部弹窗
+## 1、LYSheetCustom -- 底部弹窗
 首先导入#import "LYSheetCustom.h"，遵守代理<LYSheetCustomDelegate>
 这里有两种初始化方式
 ```objective-c
