@@ -14,10 +14,16 @@
 @interface LYSheetCustom : UIView
 
 /** 初始化方式一，标题或取消按钮标题为nil不显示 */
-- (instancetype)initWithTitle:(NSString *)title delegate:(id<LYSheetCustomDelegate>)delegate cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitlesArray:(NSArray *)otherButtonTitles;
+- (instancetype)initWithTitle:(NSString *)title
+                     delegate:(id<LYSheetCustomDelegate>)delegate
+            cancelButtonTitle:(NSString *)cancelButtonTitle
+       otherButtonTitlesArray:(NSArray *)otherButtonTitles;
 
 /** 初始化方式二，标题或取消按钮标题为nil不显示 */
-- (instancetype)initWithTitle:(NSString *)title delegate:(id<LYSheetCustomDelegate>)delegate cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSString *)otherButtonTitles, ... NS_REQUIRES_NIL_TERMINATION;
+- (instancetype)initWithTitle:(NSString *)title
+                     delegate:(id<LYSheetCustomDelegate>)delegate
+            cancelButtonTitle:(NSString *)cancelButtonTitle
+            otherButtonTitles:(NSString *)otherButtonTitles, ... NS_REQUIRES_NIL_TERMINATION;
 
 @property(nonatomic, weak) id<LYSheetCustomDelegate> delegate;
 
