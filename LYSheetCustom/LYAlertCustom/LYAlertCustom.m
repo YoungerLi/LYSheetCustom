@@ -183,7 +183,7 @@
 
 #pragma mark - 点击事件
 
-//确定
+//取消
 - (void)cancelButtonClick {
     [self hide];
     if ([self.delegate respondsToSelector:@selector(lyAlertCustom:clickedButtonAtIndex:)]) {
@@ -191,7 +191,7 @@
     }
 }
 
-//取消
+//确定
 - (void)confirmButtonClick {
     [self hide];
     if ([self.delegate respondsToSelector:@selector(lyAlertCustom:clickedButtonAtIndex:)]) {
