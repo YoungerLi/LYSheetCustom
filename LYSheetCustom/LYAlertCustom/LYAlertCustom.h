@@ -21,9 +21,7 @@ typedef NS_ENUM(NSUInteger, LYAlertMessageAlignment) {
 /** 初始化，标题或消息为nil不显示，默认必须显示一个按钮 */
 - (instancetype)initWithTitle:(NSString *)title message:(NSString *)message delegate:(id<LYAlertCustomDelegate>)delegate cancelButtonTitle:(NSString *)cancelButtonTitle confirmButtonTitle:(NSString *)confirmButtonTitle;
 
-
 @property (nonatomic, weak) id <LYAlertCustomDelegate> delegate;
-
 
 /** title的颜色。默认 blackColor */
 @property (nonatomic, strong) UIColor *titleColor;

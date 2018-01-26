@@ -32,31 +32,29 @@
 
 @implementation LYAlertCustom
 
+#pragma mark - Life Cycle
+
 - (instancetype)initWithTitle:(NSString *)title message:(NSString *)message delegate:(id<LYAlertCustomDelegate>)delegate cancelButtonTitle:(NSString *)cancelButtonTitle confirmButtonTitle:(NSString *)confirmButtonTitle
 {
     self = [super initWithFrame:[UIScreen mainScreen].bounds];
     if (self) {
-        [self initialization];
         self.backgroundColor = [UIColor colorWithWhite:0 alpha:0.0];
+        [self initialization];
         [self addSubview:self.whiteView];
         
-        if (title != nil) {
+        if (title) {
             self.title = title;
         }
-        
-        if (delegate != nil) {
-            self.delegate = delegate;
-        }
-        
-        if (message != nil) {
+        if (message) {
             self.message = message;
         }
-        
-        if (cancelButtonTitle != nil) {
+        if (delegate) {
+            self.delegate = delegate;
+        }
+        if (cancelButtonTitle) {
             self.cancelButtonTitle = cancelButtonTitle;
         }
-        
-        if (confirmButtonTitle != nil) {
+        if (confirmButtonTitle) {
             self.confirmButtonTitle = confirmButtonTitle;
         }
         
@@ -132,15 +130,15 @@
 
 
 
-#pragma mark - setter
+#pragma mark - Setters
 
 - (void)setAlignment:(LYAlertMessageAlignment)alignment
 {
     if (alignment == LYAlertMessageAlignmentLeft) {
-        _messageLabel.textAlignment = NSTextAlignmentLeft;
+        self.messageLabel.textAlignment = NSTextAlignmentLeft;
     }
     if (alignment == LYAlertMessageAlignmentCenter) {
-        _messageLabel.textAlignment = NSTextAlignmentCenter;
+        self.messageLabel.textAlignment = NSTextAlignmentCenter;
     }
 }
 - (void)setTitleColor:(UIColor *)titleColor {
@@ -155,7 +153,9 @@
 
 
 
-#pragma mark - 展示出来
+#pragma mark - Private Methods
+
+// 展示出来
 - (void)show
 {
     self.whiteView.hidden = NO;
@@ -167,7 +167,7 @@
     }];
 }
 
-#pragma mark - 隐藏
+// 隐藏
 - (void)hide
 {
     self.whiteView.hidden = YES;
@@ -181,7 +181,7 @@
 
 
 
-#pragma mark - 点击事件
+#pragma mark - Event Methods
 
 //取消
 - (void)cancelButtonClick {
@@ -202,13 +202,12 @@
 
 
 
-#pragma mark - getter
+#pragma mark - Getters
 
 - (UIView *)whiteView
 {
     if (_whiteView == nil) {
-        _whiteView = [[UIView alloc] initWithFrame:CGRectZero];
-        _whiteView.center = self.center;
+        _whiteView = [[UIView alloc] init];
         _whiteView.backgroundColor = [UIColor whiteColor];
         _whiteView.clipsToBounds = YES;
         _whiteView.layer.cornerRadius = 10;
@@ -220,7 +219,6 @@
 {
     if (_titleLabel == nil) {
         _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, WhiteViewWidth, 45)];
-        _titleLabel.text = self.title;
         _titleLabel.textAlignment = 1;
         _titleLabel.font = [UIFont boldSystemFontOfSize:17];
         UIView *line = [[UIView alloc] initWithFrame:CGRectMake(0, 44.5, WhiteViewWidth, 0.5)];
@@ -248,6 +246,7 @@
         [_cancelButton setTitle:@"取消" forState:UIControlStateNormal];
         [_cancelButton setTitleColor:[UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1] forState:UIControlStateNormal]; // #333333
         _cancelButton.titleLabel.font = [UIFont systemFontOfSize:15];
+        [_cancelButton setBackgroundImage:[self imageWithColor:[UIColor colorWithRed:230/255.0 green:230/255.0 blue:230/255.0 alpha:1]] forState:UIControlStateHighlighted];
         [_cancelButton addTarget:self action:@selector(cancelButtonClick) forControlEvents:UIControlEventTouchUpInside];
     }
     return _cancelButton;
@@ -260,9 +259,28 @@
         [_confirmButton setTitle:@"确定" forState:UIControlStateNormal];
         [_confirmButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
         _confirmButton.titleLabel.font = [UIFont systemFontOfSize:15];
+        [_confirmButton setBackgroundImage:[self imageWithColor:[UIColor colorWithRed:230/255.0 green:230/255.0 blue:230/255.0 alpha:1]] forState:UIControlStateHighlighted];
         [_confirmButton addTarget:self action:@selector(confirmButtonClick) forControlEvents:UIControlEventTouchUpInside];
     }
     return _confirmButton;
+}
+
+
+
+
+#pragma mark - %%%%%%%%%%%%%%%%%%%%%%
+
+// 根据UIColor生成一个UIImage
+- (UIImage *)imageWithColor:(UIColor *)color
+{
+    CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(context, [color CGColor]);
+    CGContextFillRect(context, rect);
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
 }
 
 @end
