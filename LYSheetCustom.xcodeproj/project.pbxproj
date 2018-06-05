@@ -17,6 +17,7 @@
 		C60E03621F25DBDF00954BD5 /* LYSheetCustomUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C60E03611F25DBDF00954BD5 /* LYSheetCustomUITests.m */; };
 		C60E03721F25F81000954BD5 /* LYSheetCustom.m in Sources */ = {isa = PBXBuildFile; fileRef = C60E03711F25F81000954BD5 /* LYSheetCustom.m */; };
 		C6134D5F1F676AE1008E02C1 /* LYAlertCustom.m in Sources */ = {isa = PBXBuildFile; fileRef = C6134D5E1F676AE1008E02C1 /* LYAlertCustom.m */; };
+		C6EDB26B20C4F35E00D6537D /* LYActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EDB26A20C4F35E00D6537D /* LYActionSheet.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		C6134D5E1F676AE1008E02C1 /* LYAlertCustom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYAlertCustom.m; sourceTree = "<group>"; };
 		C6444EFB1F7A00BE0008A557 /* LYAlertCustom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LYAlertCustom.png; sourceTree = "<group>"; };
 		C6444EFC1F7A00BE0008A557 /* LYSheetCustom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LYSheetCustom.png; sourceTree = "<group>"; };
+		C6EDB26920C4F35E00D6537D /* LYActionSheet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYActionSheet.h; sourceTree = "<group>"; };
+		C6EDB26A20C4F35E00D6537D /* LYActionSheet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYActionSheet.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +123,7 @@
 			children = (
 				B67EB8031F4B28E900688175 /* LYAlertCustom */,
 				C60E036F1F25F7DE00954BD5 /* LYSheetCustom */,
+				C6EDB26820C4F32400D6537D /* LYActionSheet */,
 				C60E033F1F25DBDF00954BD5 /* AppDelegate.h */,
 				C60E03401F25DBDF00954BD5 /* AppDelegate.m */,
 				C60E03421F25DBDF00954BD5 /* ViewController.h */,
@@ -168,6 +172,15 @@
 				C60E03711F25F81000954BD5 /* LYSheetCustom.m */,
 			);
 			path = LYSheetCustom;
+			sourceTree = "<group>";
+		};
+		C6EDB26820C4F32400D6537D /* LYActionSheet */ = {
+			isa = PBXGroup;
+			children = (
+				C6EDB26920C4F35E00D6537D /* LYActionSheet.h */,
+				C6EDB26A20C4F35E00D6537D /* LYActionSheet.m */,
+			);
+			path = LYActionSheet;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,6 +319,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6EDB26B20C4F35E00D6537D /* LYActionSheet.m in Sources */,
 				C60E03441F25DBDF00954BD5 /* ViewController.m in Sources */,
 				C6134D5F1F676AE1008E02C1 /* LYAlertCustom.m in Sources */,
 				C60E03411F25DBDF00954BD5 /* AppDelegate.m in Sources */,

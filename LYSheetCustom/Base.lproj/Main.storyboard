@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,31 +22,45 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ii-yp-5zt">
-                                <rect key="frame" x="148" y="311" width="78" height="44"/>
+                                <rect key="frame" x="112" y="311" width="150" height="44"/>
                                 <color key="backgroundColor" red="1" green="0.40490443089213479" blue="0.40479471930384414" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="jui-yI-Hq4"/>
-                                    <constraint firstAttribute="width" constant="78" id="qyW-MX-l0R"/>
+                                    <constraint firstAttribute="width" constant="150" id="qyW-MX-l0R"/>
                                 </constraints>
-                                <state key="normal" title="弹Sheet">
+                                <state key="normal" title="LYSheetCustom">
                                     <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="showActionSheet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EfM-DS-AsY"/>
+                                    <action selector="showSheetCustom:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kAx-5S-hSy"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Bo-NA-QQ7">
-                                <rect key="frame" x="148" y="247" width="78" height="44"/>
+                                <rect key="frame" x="112" y="247" width="150" height="44"/>
                                 <color key="backgroundColor" red="1" green="0.4049044309" blue="0.40479471929999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="78" id="HFn-DQ-pea"/>
+                                    <constraint firstAttribute="width" constant="150" id="HFn-DQ-pea"/>
                                     <constraint firstAttribute="height" constant="44" id="emQ-PU-62o"/>
                                 </constraints>
-                                <state key="normal" title="弹Alert">
+                                <state key="normal" title="LYAlertCustom">
                                     <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="showAlert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wQK-QW-7bG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z53-cn-YZS">
+                                <rect key="frame" x="112" y="375" width="150" height="44"/>
+                                <color key="backgroundColor" red="1" green="0.4049044309" blue="0.40479471929999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Xna-Xh-czI"/>
+                                    <constraint firstAttribute="width" constant="150" id="kSZ-s4-P8k"/>
+                                </constraints>
+                                <state key="normal" title="LYActionSheet">
+                                    <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="showActionSheet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VUp-3c-xzg"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -56,6 +70,8 @@
                             <constraint firstItem="0Ii-yp-5zt" firstAttribute="top" secondItem="4Bo-NA-QQ7" secondAttribute="bottom" constant="20" id="2GN-18-ETn"/>
                             <constraint firstItem="4Bo-NA-QQ7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2hR-qb-xEs"/>
                             <constraint firstItem="0Ii-yp-5zt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kEH-oc-p4r"/>
+                            <constraint firstItem="Z53-cn-YZS" firstAttribute="top" secondItem="0Ii-yp-5zt" secondAttribute="bottom" constant="20" id="pYd-pD-U8h"/>
+                            <constraint firstItem="Z53-cn-YZS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="r6P-ZN-ad1"/>
                         </constraints>
                     </view>
                 </viewController>

@@ -263,10 +263,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    [self hide];
     if ([self.delegate respondsToSelector:@selector(lySheetCustom:clickedButtonAtIndex:)]) {
         [self.delegate lySheetCustom:self clickedButtonAtIndex:indexPath.row];
     }
+    [self hide];
 }
 
 

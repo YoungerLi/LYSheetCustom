@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "LYSheetCustom.h"
 #import "LYAlertCustom.h"
+#import "LYActionSheet.h"
 
 @interface ViewController ()<LYSheetCustomDelegate, LYAlertCustomDelegate>
 
@@ -25,7 +26,7 @@
 
 
 
-#pragma mark - LYAlertCustom的用法
+#pragma mark - LYAlertCustom
 
 - (IBAction)showAlert:(id)sender {
     LYAlertCustom *alert = [[LYAlertCustom alloc] initWithTitle:@"提示" message:@"欢迎使用LYAlertCustom哈哈" delegate:self cancelButtonTitle:@"取消" confirmButtonTitle:@"确定"];
@@ -41,9 +42,9 @@
 
 
 
-#pragma mark - LYSheetCustom的用法
+#pragma mark - LYSheetCustom
 
-- (IBAction)showActionSheet:(id)sender {
+- (IBAction)showSheetCustom:(id)sender {
     LYSheetCustom *sheet = [[LYSheetCustom alloc] initWithTitle:@"更换背景颜色" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"红色", @"黄色", @"蓝色", nil];
     [sheet show];
 }
@@ -62,5 +63,17 @@
 }
 
 
+
+
+#pragma mark - LYActionSheet
+
+- (IBAction)showActionSheet:(id)sender {
+    LYActionSheet *sheet = [[LYActionSheet alloc] initWithTitle:@"这里是标题哈哈" cancelButtonTitle:@"取消" otherButtonTitles:@[@"男", @"女"] selectBlock:^(NSInteger index) {
+        NSLog(@"选择了 = %zd", index);
+    } cancelBlock:^{
+        NSLog(@"取消");
+    }];
+    [sheet show];
+}
 
 @end
