@@ -10,6 +10,8 @@
 #import "LYSheetCustom.h"
 #import "LYAlertCustom.h"
 #import "LYActionSheet.h"
+#import "LYDatePicker.h"
+#import "LYPickerView.h"
 
 @interface ViewController ()<LYSheetCustomDelegate, LYAlertCustomDelegate>
 
@@ -74,6 +76,31 @@
         NSLog(@"取消");
     }];
     [sheet show];
+}
+
+
+
+
+#pragma mark - LYDatePicker
+
+- (IBAction)showDatePicker:(id)sender {
+    LYDatePicker *picker = [[LYDatePicker alloc] initWithPickBlock:^(NSDate *date) {
+        NSLog(@"date = %@", date);
+    }];
+    [picker show];
+}
+
+
+
+
+#pragma mark - LYPickerView
+
+- (IBAction)showPickerView:(id)sender {
+    LYPickerView *pickerView = [[LYPickerView alloc] initWithItems:@[@"北京", @"上海", @"广州", @"深圳", @"天津", @"重庆", @"成都"] pickBlock:^(NSString *string) {
+        NSLog(@"string = %@", string);
+    }];
+    [pickerView setDefaultSelectedRow:2];
+    [pickerView show];
 }
 
 @end

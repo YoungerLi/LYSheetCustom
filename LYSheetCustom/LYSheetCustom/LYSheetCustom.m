@@ -179,6 +179,12 @@
         _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, HEIGHT, WIDTH, height) style:UITableViewStyleGrouped];
         _tableView.delegate = self;
         _tableView.dataSource = self;
+        if (@available(iOS 11.0, *)) {
+            _tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        }
+        _tableView.estimatedRowHeight = 0;
+        _tableView.estimatedSectionHeaderHeight = 0;
+        _tableView.estimatedSectionFooterHeight = 0;
         _tableView.scrollEnabled = NO;
         _tableView.backgroundColor = [UIColor colorWithRed:246/255.0f green:246/255.0f blue:246/255.0f alpha:1];    //#f6f6f6
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;  //去除分割线

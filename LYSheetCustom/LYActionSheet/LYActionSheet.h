@@ -13,12 +13,14 @@ typedef void(^CancelBlock)(void);
 
 @interface LYActionSheet : UIView
 
+/** 初始化 */
 - (instancetype)initWithTitle:(NSString *)title
             cancelButtonTitle:(NSString *)cancelButtonTitle
             otherButtonTitles:(NSArray *)otherButtonTitles
                   selectBlock:(SelectBlock)selectBlock
                   cancelBlock:(CancelBlock)cancelBlock;
 
+/** 展示出来 */
 - (void)show;
 
 @end
