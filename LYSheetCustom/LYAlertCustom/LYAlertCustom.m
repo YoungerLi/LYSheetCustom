@@ -16,6 +16,8 @@
 @interface LYAlertCustom ()
 {
     CGFloat _whiteViewHeight;
+    
+    dispatch_block_t _confirmBlock;
 }
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *message;
@@ -56,6 +58,35 @@
         }
         if (confirmButtonTitle) {
             self.confirmButtonTitle = confirmButtonTitle;
+        }
+        
+        [self prepareSubViewsFrame];
+    }
+    return self;
+}
+
+- (instancetype)initWithTitle:(NSString *)title message:(NSString *)message cancelButtonTitle:(NSString *)cancelButtonTitle confirmButtonTitle:(NSString *)confirmButtonTitle confirmBlock:(dispatch_block_t)confirmBlock
+{
+    self = [super initWithFrame:[UIScreen mainScreen].bounds];
+    if (self) {
+        self.backgroundColor = [UIColor colorWithWhite:0 alpha:0.0];
+        [self initialization];
+        [self addSubview:self.whiteView];
+        
+        if (title) {
+            self.title = title;
+        }
+        if (message) {
+            self.message = message;
+        }
+        if (cancelButtonTitle) {
+            self.cancelButtonTitle = cancelButtonTitle;
+        }
+        if (confirmButtonTitle) {
+            self.confirmButtonTitle = confirmButtonTitle;
+        }
+        if (confirmBlock) {
+            _confirmBlock = confirmBlock;
         }
         
         [self prepareSubViewsFrame];
@@ -196,6 +227,9 @@
     [self hide];
     if ([self.delegate respondsToSelector:@selector(lyAlertCustom:clickedButtonAtIndex:)]) {
         [self.delegate lyAlertCustom:self clickedButtonAtIndex:1];
+    }
+    if (_confirmBlock) {
+        _confirmBlock();
     }
 }
 

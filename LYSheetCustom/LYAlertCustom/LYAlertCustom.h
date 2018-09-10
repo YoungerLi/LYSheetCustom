@@ -15,11 +15,22 @@ typedef NS_ENUM(NSUInteger, LYAlertMessageAlignment) {
 
 @protocol LYAlertCustomDelegate;
 
-
 @interface LYAlertCustom : UIView
 
-/** 初始化，标题或消息为nil不显示，默认必须显示一个按钮 */
-- (instancetype)initWithTitle:(NSString *)title message:(NSString *)message delegate:(id<LYAlertCustomDelegate>)delegate cancelButtonTitle:(NSString *)cancelButtonTitle confirmButtonTitle:(NSString *)confirmButtonTitle;
+/** 初始化1，标题或消息为nil不显示，默认必须显示一个按钮 */
+- (instancetype)initWithTitle:(NSString *)title
+                      message:(NSString *)message
+                     delegate:(id<LYAlertCustomDelegate>)delegate
+            cancelButtonTitle:(NSString *)cancelButtonTitle
+           confirmButtonTitle:(NSString *)confirmButtonTitle;
+
+/** 初始化2，标题或消息为nil不显示，默认必须显示一个按钮 */
+- (instancetype)initWithTitle:(NSString *)title
+                      message:(NSString *)message
+            cancelButtonTitle:(NSString *)cancelButtonTitle
+           confirmButtonTitle:(NSString *)confirmButtonTitle
+                 confirmBlock:(dispatch_block_t)confirmBlock;
+
 
 @property (nonatomic, weak) id <LYAlertCustomDelegate> delegate;
 
@@ -28,9 +39,9 @@ typedef NS_ENUM(NSUInteger, LYAlertMessageAlignment) {
 
 /** message的颜色。默认 darkTextColor */
 @property (nonatomic, strong) UIColor *messageColor;
+
 /** message的alignment, 默认居中 */
 @property (nonatomic, assign) LYAlertMessageAlignment alignment;
-
 
 /** 展示出来 */
 - (void)show;

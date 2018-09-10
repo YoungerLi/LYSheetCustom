@@ -67,7 +67,7 @@
 
 @implementation LYActionSheet
 
-- (instancetype)initWithTitle:(NSString *)title cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSArray *)otherButtonTitles selectBlock:(void (^)(NSInteger))selectBlock cancelBlock:(void (^)(void))cancelBlock
+- (instancetype)initWithTitle:(NSString *)title cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSArray *)otherButtonTitles selectBlock:(SelectBlock)selectBlock cancelBlock:(CancelBlock)cancelBlock
 {
     self = [super initWithFrame:[UIScreen mainScreen].bounds];
     if (self) {
