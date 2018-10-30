@@ -17,14 +17,14 @@ typedef NS_ENUM(NSUInteger, LYAlertMessageAlignment) {
 
 @interface LYAlertCustom : UIView
 
-/** 初始化1，标题或消息为nil不显示，默认必须显示一个按钮 */
+/** 初始化1（delegate），标题或消息为nil不显示，默认必须显示一个按钮 */
 - (instancetype)initWithTitle:(NSString *)title
                       message:(NSString *)message
                      delegate:(id<LYAlertCustomDelegate>)delegate
             cancelButtonTitle:(NSString *)cancelButtonTitle
            confirmButtonTitle:(NSString *)confirmButtonTitle;
 
-/** 初始化2，标题或消息为nil不显示，默认必须显示一个按钮 */
+/** 初始化2（block），标题或消息为nil不显示，默认必须显示一个按钮 */
 - (instancetype)initWithTitle:(NSString *)title
                       message:(NSString *)message
             cancelButtonTitle:(NSString *)cancelButtonTitle
