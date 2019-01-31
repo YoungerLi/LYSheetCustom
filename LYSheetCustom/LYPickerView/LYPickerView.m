@@ -37,7 +37,7 @@
 
 - (void)show
 {
-    [[UIApplication sharedApplication].keyWindow addSubview:self];
+    [[UIApplication sharedApplication].delegate.window addSubview:self];
     [UIView animateWithDuration:0.3 animations:^{
         self.backgroundColor = [UIColor colorWithWhite:.0f alpha:0.5f];
         self.whiteView.frame = CGRectMake(0, HEIGHT - WhiteHeight, WIDTH, WhiteHeight);

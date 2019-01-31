@@ -192,7 +192,7 @@
     self.whiteView.hidden = NO;
     self.whiteView.frame = CGRectMake(0, 0, WhiteViewWidth, _whiteViewHeight);
     self.whiteView.center = self.center;
-    [[UIApplication sharedApplication].keyWindow addSubview:self];
+    [[UIApplication sharedApplication].delegate.window addSubview:self];
     [UIView animateWithDuration:0.2 animations:^{
         self.backgroundColor = [UIColor colorWithWhite:.0f alpha:0.5f];
     }];

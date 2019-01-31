@@ -15,10 +15,13 @@
 		C60E034C1F25DBDF00954BD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C60E034A1F25DBDF00954BD5 /* LaunchScreen.storyboard */; };
 		C60E03571F25DBDF00954BD5 /* LYSheetCustomTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C60E03561F25DBDF00954BD5 /* LYSheetCustomTests.m */; };
 		C60E03621F25DBDF00954BD5 /* LYSheetCustomUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C60E03611F25DBDF00954BD5 /* LYSheetCustomUITests.m */; };
-		C60E03721F25F81000954BD5 /* LYSheetCustom.m in Sources */ = {isa = PBXBuildFile; fileRef = C60E03711F25F81000954BD5 /* LYSheetCustom.m */; };
 		C6134D5F1F676AE1008E02C1 /* LYAlertCustom.m in Sources */ = {isa = PBXBuildFile; fileRef = C6134D5E1F676AE1008E02C1 /* LYAlertCustom.m */; };
 		C6784BF820DE3850001EBC40 /* LYPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C6784BF720DE3850001EBC40 /* LYPickerView.m */; };
+		C696053E21F9DBAC006D5D39 /* RegionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C696053A21F9DBAC006D5D39 /* RegionModel.m */; };
+		C696053F21F9DBAC006D5D39 /* city.plist in Resources */ = {isa = PBXBuildFile; fileRef = C696053B21F9DBAC006D5D39 /* city.plist */; };
+		C696054021F9DBAC006D5D39 /* LYCityPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C696053C21F9DBAC006D5D39 /* LYCityPickerView.m */; };
 		C698ECF620C62ACE00741642 /* LYDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = C698ECF520C62ACE00741642 /* LYDatePicker.m */; };
+		C6D424B621BFBC2A00FE06BA /* LYSheetCustom.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D424B521BFBC2A00FE06BA /* LYSheetCustom.m */; };
 		C6EDB26B20C4F35E00D6537D /* LYActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = C6EDB26A20C4F35E00D6537D /* LYActionSheet.m */; };
 /* End PBXBuildFile section */
 
@@ -56,16 +59,21 @@
 		C60E035D1F25DBDF00954BD5 /* LYSheetCustomUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LYSheetCustomUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C60E03611F25DBDF00954BD5 /* LYSheetCustomUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYSheetCustomUITests.m; sourceTree = "<group>"; };
 		C60E03631F25DBDF00954BD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C60E03701F25F81000954BD5 /* LYSheetCustom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYSheetCustom.h; sourceTree = "<group>"; };
-		C60E03711F25F81000954BD5 /* LYSheetCustom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYSheetCustom.m; sourceTree = "<group>"; };
 		C6134D5D1F676AE1008E02C1 /* LYAlertCustom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYAlertCustom.h; sourceTree = "<group>"; };
 		C6134D5E1F676AE1008E02C1 /* LYAlertCustom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYAlertCustom.m; sourceTree = "<group>"; };
 		C6444EFB1F7A00BE0008A557 /* LYAlertCustom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LYAlertCustom.png; sourceTree = "<group>"; };
 		C6444EFC1F7A00BE0008A557 /* LYSheetCustom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LYSheetCustom.png; sourceTree = "<group>"; };
 		C6784BF620DE3850001EBC40 /* LYPickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYPickerView.h; sourceTree = "<group>"; };
 		C6784BF720DE3850001EBC40 /* LYPickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYPickerView.m; sourceTree = "<group>"; };
+		C696053921F9DBAC006D5D39 /* LYCityPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYCityPickerView.h; sourceTree = "<group>"; };
+		C696053A21F9DBAC006D5D39 /* RegionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegionModel.m; sourceTree = "<group>"; };
+		C696053B21F9DBAC006D5D39 /* city.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = city.plist; sourceTree = "<group>"; };
+		C696053C21F9DBAC006D5D39 /* LYCityPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYCityPickerView.m; sourceTree = "<group>"; };
+		C696053D21F9DBAC006D5D39 /* RegionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegionModel.h; sourceTree = "<group>"; };
 		C698ECF420C62ACE00741642 /* LYDatePicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYDatePicker.h; sourceTree = "<group>"; };
 		C698ECF520C62ACE00741642 /* LYDatePicker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYDatePicker.m; sourceTree = "<group>"; };
+		C6D424B421BFBC2A00FE06BA /* LYSheetCustom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYSheetCustom.h; sourceTree = "<group>"; };
+		C6D424B521BFBC2A00FE06BA /* LYSheetCustom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYSheetCustom.m; sourceTree = "<group>"; };
 		C6EDB26920C4F35E00D6537D /* LYActionSheet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYActionSheet.h; sourceTree = "<group>"; };
 		C6EDB26A20C4F35E00D6537D /* LYActionSheet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYActionSheet.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -132,6 +140,7 @@
 				C6EDB26820C4F32400D6537D /* LYActionSheet */,
 				C698ECF320C62AA800741642 /* LYDatePicker */,
 				C6784BF520DE3734001EBC40 /* LYPickerView */,
+				C696053821F9DBAC006D5D39 /* LYCityPickerView */,
 				C60E033F1F25DBDF00954BD5 /* AppDelegate.h */,
 				C60E03401F25DBDF00954BD5 /* AppDelegate.m */,
 				C60E03421F25DBDF00954BD5 /* ViewController.h */,
@@ -176,8 +185,8 @@
 		C60E036F1F25F7DE00954BD5 /* LYSheetCustom */ = {
 			isa = PBXGroup;
 			children = (
-				C60E03701F25F81000954BD5 /* LYSheetCustom.h */,
-				C60E03711F25F81000954BD5 /* LYSheetCustom.m */,
+				C6D424B421BFBC2A00FE06BA /* LYSheetCustom.h */,
+				C6D424B521BFBC2A00FE06BA /* LYSheetCustom.m */,
 			);
 			path = LYSheetCustom;
 			sourceTree = "<group>";
@@ -189,6 +198,18 @@
 				C6784BF720DE3850001EBC40 /* LYPickerView.m */,
 			);
 			path = LYPickerView;
+			sourceTree = "<group>";
+		};
+		C696053821F9DBAC006D5D39 /* LYCityPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				C696053921F9DBAC006D5D39 /* LYCityPickerView.h */,
+				C696053C21F9DBAC006D5D39 /* LYCityPickerView.m */,
+				C696053D21F9DBAC006D5D39 /* RegionModel.h */,
+				C696053A21F9DBAC006D5D39 /* RegionModel.m */,
+				C696053B21F9DBAC006D5D39 /* city.plist */,
+			);
+			path = LYCityPickerView;
 			sourceTree = "<group>";
 		};
 		C698ECF320C62AA800741642 /* LYDatePicker */ = {
@@ -319,6 +340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C60E034C1F25DBDF00954BD5 /* LaunchScreen.storyboard in Resources */,
+				C696053F21F9DBAC006D5D39 /* city.plist in Resources */,
 				C60E03491F25DBDF00954BD5 /* Assets.xcassets in Resources */,
 				C60E03471F25DBDF00954BD5 /* Main.storyboard in Resources */,
 			);
@@ -347,11 +369,13 @@
 			files = (
 				C6EDB26B20C4F35E00D6537D /* LYActionSheet.m in Sources */,
 				C60E03441F25DBDF00954BD5 /* ViewController.m in Sources */,
+				C696054021F9DBAC006D5D39 /* LYCityPickerView.m in Sources */,
 				C6134D5F1F676AE1008E02C1 /* LYAlertCustom.m in Sources */,
+				C6D424B621BFBC2A00FE06BA /* LYSheetCustom.m in Sources */,
 				C60E03411F25DBDF00954BD5 /* AppDelegate.m in Sources */,
 				C698ECF620C62ACE00741642 /* LYDatePicker.m in Sources */,
 				C60E033E1F25DBDF00954BD5 /* main.m in Sources */,
-				C60E03721F25F81000954BD5 /* LYSheetCustom.m in Sources */,
+				C696053E21F9DBAC006D5D39 /* RegionModel.m in Sources */,
 				C6784BF820DE3850001EBC40 /* LYPickerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

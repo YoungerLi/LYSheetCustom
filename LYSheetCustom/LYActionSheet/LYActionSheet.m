@@ -85,7 +85,7 @@
 
 - (void)show
 {
-    [[UIApplication sharedApplication].keyWindow addSubview:self];
+    [[UIApplication sharedApplication].delegate.window addSubview:self];
     [UIView animateWithDuration:0.3 animations:^{
         self.backgroundColor = [UIColor colorWithWhite:.0f alpha:0.5f];
         self.tableView.frame = CGRectMake(10, HEIGHT - self.tableHeight, WIDTH-20, self.tableHeight);

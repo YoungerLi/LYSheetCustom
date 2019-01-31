@@ -12,6 +12,7 @@
 #import "LYActionSheet.h"
 #import "LYDatePicker.h"
 #import "LYPickerView.h"
+#import "LYCityPickerView.h"
 
 @interface ViewController ()<LYSheetCustomDelegate, LYAlertCustomDelegate>
 
@@ -21,7 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor grayColor];
     
 }
 
