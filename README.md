@@ -12,8 +12,7 @@
     [sheet show];
 }
 * 方式二、按钮以数组的形式列举出来
-- (void)showSheetView2
-{
+- (void)showSheetView2 {
     LYSheetCustom *sheet = [[LYSheetCustom alloc] initWithTitle:@"这里是标题，可有可无，如果为nil则不显示" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@[@"红色", @"黄色", @"蓝色"]];
     [sheet show];
 }
