@@ -7,8 +7,7 @@
 这里有两种初始化方式
 ```objective-c
 * 方式一、和UIActionSheet的使用方法一样
-- (void)showSheetView1
-{
+- (void)showSheetView1 {
     LYSheetCustom *sheet = [[LYSheetCustom alloc] initWithTitle:@"这里是标题，可有可无，如果为nil则不显示" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"红色", @"黄色", @"蓝色", nil];
     [sheet show];
 }
