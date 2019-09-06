@@ -37,8 +37,7 @@
     alert.messageColor = [UIColor greenColor];  //可以自定义内容颜色，默认darkTextColor
     [alert show];
 }
-- (void)lyAlertCustom:(LYAlertCustom *)alertCustom clickedButtonAtIndex:(NSInteger)buttonIndex
-{
+- (void)lyAlertCustom:(LYAlertCustom *)alertCustom clickedButtonAtIndex:(NSInteger)buttonIndex {
     NSLog(@"点击了第%zd行", buttonIndex);
 }
 
@@ -51,8 +50,7 @@
     LYSheetCustom *sheet = [[LYSheetCustom alloc] initWithTitle:@"更换背景颜色" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"红色", @"黄色", @"蓝色", nil];
     [sheet show];
 }
-- (void)lySheetCustom:(LYSheetCustom *)sheetCustom clickedButtonAtIndex:(NSInteger)buttonIndex
-{
+- (void)lySheetCustom:(LYSheetCustom *)sheetCustom clickedButtonAtIndex:(NSInteger)buttonIndex {
     NSLog(@"点击了第%zd行", buttonIndex);
     if (buttonIndex == 0) {
         self.view.backgroundColor = [UIColor redColor];
